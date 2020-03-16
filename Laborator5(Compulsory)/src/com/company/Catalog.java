@@ -46,6 +46,11 @@ public class Catalog implements Serializable {
         documents.add(doc);
     }
 
+    /**
+     * Folosind stream-uri cauta un document in functie de id-ul acestuia in cazul in care nu exista va returna null
+     * @param id
+     * @return
+     */
     public Document findById(String id){
         return documents.stream().filter(d->d.getId().equals(id)).findFirst().orElse(null);
     }

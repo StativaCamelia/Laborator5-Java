@@ -1,6 +1,7 @@
 package com.company;
 
 import java.io.IOException;
+import java.net.URISyntaxException;
 
 public class Main {
 
@@ -13,7 +14,7 @@ public class Main {
     private void testCreateSave(){
         Catalog catalog =
                 new Catalog("Java Resources", "d:/JAVA/catalog.ser");
-        Document doc = new Document("java1", "Java Course 1", "https://profs.info.uaic.ro/~acf/java/slides/en/intro_slides_en.pdf");
+        Document doc = new Document("java1", "Java Course 1", "https://profs.info.uaic.ro/~acf/java/slides/en/intro_slide_en.pdf");
         doc.addTag("type", "Slides");
         catalog.add(doc);
         try {
@@ -25,8 +26,21 @@ public class Main {
     }
 
     private void testLoadView(){
-        Catalog catalog = CatalogUtil.load("d:/JAVA/catalog.ser");
-        System.out.println(catalog);
+        Catalog catalog = new Catalog();
+        try {
+            catalog = CatalogUtil.load("d:/JAVA/catalog.ser");
+        }
+        catch(IOException| InvalidCatalogException| ClassNotFoundException e) {
+            e.printStackTrace();
+        }
         Document doc = catalog.findById("java1");
+        try {
+            CatalogUtil.view(doc);
+        }
+        catch (IOException|URISyntaxException e){
+            e.printStackTrace();
+        }
+
+
     }
 }
