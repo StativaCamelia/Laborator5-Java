@@ -11,6 +11,12 @@ import java.net.URISyntaxException;
 
 public class CatalogUtil {
 
+    /**
+     * Creeaza si salveaza un nou fisier local care are path-ul dat ca parametru
+     * Catalogul poate fi scris ca un ObjectOutputStream deoarece este serializabil
+     * @param catalog
+     * @throws IOException
+     */
     public static void save(Catalog catalog)
     throws IOException {
         try (ObjectOutputStream oos = new ObjectOutputStream(new FileOutputStream(catalog.getPath()))) {
@@ -21,6 +27,14 @@ public class CatalogUtil {
         }
     }
 
+    /**
+     * Fiind dat path-ul unui catalog il incarca drept un ObjectInputStream si citeste continutul acestuia folosind metoda readObject
+     * @param path
+     * @return
+     * @throws InvalidCatalogException
+     * @throws IOException
+     * @throws ClassNotFoundException
+     */
     public static Catalog load(String path)
     throws InvalidCatalogException, IOException, ClassNotFoundException
     {

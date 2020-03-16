@@ -11,6 +11,10 @@ public class Main {
 	app.testLoadView();
     }
 
+    /**
+     * Creeaza un nou catalog si adauga un document in acesta
+     * Apoi salveaza local catalogul cu ajutorul functiei save definita in clasa CatalogUtil
+     */
     private void testCreateSave(){
         Catalog catalog =
                 new Catalog("Java Resources", "d:/JAVA/catalog.ser");
@@ -25,6 +29,10 @@ public class Main {
         }
     }
 
+    /**
+     * Incarca un catalog(folosind metoda Load ), cauta un document in acesta si apoi deschide documentul cu o aplicatie nativa a sistemului de operare(functionalitate realizata de
+     * metoda view)
+     */
     private void testLoadView(){
         Catalog catalog = new Catalog();
         try {
