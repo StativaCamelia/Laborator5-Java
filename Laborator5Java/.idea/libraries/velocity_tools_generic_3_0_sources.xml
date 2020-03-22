@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="velocity-tools-generic-3.0-sources">
+    <CLASSES />
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$PROJECT_DIR$/libs/velocity-tools-generic-3.0-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

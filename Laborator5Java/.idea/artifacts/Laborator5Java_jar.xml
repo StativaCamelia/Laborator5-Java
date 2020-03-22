@@ -2,8 +2,9 @@
   <artifact type="jar" build-on-make="true" name="Laborator5Java:jar">
     <output-path>$PROJECT_DIR$/out/artifacts/Laborator5Java_jar</output-path>
     <root id="archive" name="Laborator5Java.jar">
-      <element id="module-output" name="Laborator5Java" />
       <element id="extracted-dir" path="$PROJECT_DIR$/libs/gson-2.8.2.jar" path-in-jar="/" />
+      <element id="module-source" name="Laborator5Java" />
+      <element id="library" level="project" name="tika-app-1.24" />
     </root>
   </artifact>
 </component>

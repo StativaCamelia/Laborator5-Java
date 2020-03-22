@@ -31,7 +31,7 @@ public class Main {
         String[] commandParse = commandFull.split(" ");
         commandName = commandParse[0];
 
-        if(commandName.equals("load")){
+        if(commandName.toUpperCase().equals("LOAD")){
 
             Command newCommand = new LoadCommand(Arrays.copyOfRange(commandParse, 1, commandParse.length));
             try {
@@ -41,7 +41,7 @@ public class Main {
                 e.printStackTrace();
             }
         }
-        else if(commandName.equals("list")){
+        else if(commandName.toUpperCase().equals("LIST")){
             Command newCommand = new ListCommand(Arrays.copyOfRange(commandParse, 1, commandParse.length));
             try {
                 newCommand.executeCommand();
@@ -51,7 +51,7 @@ public class Main {
             }
         }
 
-        else if(commandName.equals("view")){
+        else if(commandName.toUpperCase().equals("VIEW")){
             Command newCommand = new ViewCommand(Arrays.copyOfRange(commandParse, 1, commandParse.length));
             try {
                 newCommand.executeCommand();
@@ -61,7 +61,7 @@ public class Main {
             }
         }
 
-        else if(commandName.equals("report")){
+        else if(commandName.toUpperCase().equals("REPORT_HTML")){
             Command newCommand = new ReportCommand(Arrays.copyOfRange(commandParse, 1, commandParse.length));
             try {
                 newCommand.executeCommand();
@@ -70,6 +70,24 @@ public class Main {
                 e.printStackTrace();
             }
             }
+        else if(commandName.toUpperCase().equals("INFO")){
+            Command newCommand = new InfoCommand(Arrays.copyOfRange(commandParse, 1, commandParse.length));
+            try {
+                newCommand.executeCommand();
+            }
+            catch (ClassNotFoundException e){
+                e.printStackTrace();
+            }
+        }
+        else if(commandName.toUpperCase().equals("REPORT")){
+            Command newCommand = new ReportMultipleCommand(Arrays.copyOfRange(commandParse, 1, commandParse.length));
+            try {
+                newCommand.executeCommand();
+            }
+            catch (ClassNotFoundException e){
+                e.printStackTrace();
+            }
+        }
         else
             throw new InvalidCommand("Comanda introdusa nu exista");
 	}
