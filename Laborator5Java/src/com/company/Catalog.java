@@ -4,7 +4,7 @@ import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
 
-public class Catalog implements Serializable {
+public class cCatalog implements Serializable {
     private String name;
     private String path;
     private List<Document> documents = new ArrayList<>();

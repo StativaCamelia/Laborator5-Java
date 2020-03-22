@@ -1,0 +1,9 @@
+<component name="ArtifactManager">
+  <artifact type="jar" build-on-make="true" name="Laborator5Java:jar">
+    <output-path>$PROJECT_DIR$/out/artifacts/Laborator5Java_jar</output-path>
+    <root id="archive" name="Laborator5Java.jar">
+      <element id="module-output" name="Laborator5Java" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/libs/gson-2.8.2.jar" path-in-jar="/" />
+    </root>
+  </artifact>
+</component>
