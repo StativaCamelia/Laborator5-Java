@@ -23,6 +23,13 @@ public class ViewCommand implements Command{
         }
     }
 
+    /**
+     * Fiind dat un document incearca sa il deschida cu ajutorul modului Desktop, daca path-ul acestuia este un URI va folosi metoda browse in caz contrar daca este un document
+     * local va folosi metoda desktop.open;
+     * @throws IOException
+     * @throws URISyntaxException
+     */
+
     public void setParameters(List<String> parameters) {
         this.parameters = parameters;
     }

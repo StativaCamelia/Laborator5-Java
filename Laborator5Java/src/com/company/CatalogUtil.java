@@ -10,28 +10,37 @@ import java.net.URISyntaxException;
 
 public class CatalogUtil {
 
-    /**
-     * Creeaza si salveaza un nou fisier local care are path-ul dat ca parametru
-     * Catalogul poate fi scris ca un ObjectOutputStream deoarece este serializabil
+    /***
+     * Salveaza un obiect de tipul catalog intr-un format de tip json
+     * Acest lucru se realizeaza cu ajutorul librariei Gson
+     * Mai intai transforma obiectul de tip catalog intr-un string format ca un json
+     * Apoi cu ajutorul unui obiect de tip FileWriter scrie acest string intr-un file cu extensia json.
+     * Folosim un bloc de tip try with resources pentru a fi necesara inchiderea explicita a obictului FileWriter
      * @param catalog
      * @throws IOException
      */
-
     public static void savePlaintext(Catalog catalog)
     throws IOException
     {
-        try{
+        try(Writer writerJ = new FileWriter(catalog.getPath());){
            Gson gson = new Gson();
            String jsonObj = gson.toJson(catalog);
-           Writer writerJ = new FileWriter(catalog.getPath());
            writerJ.write(jsonObj);
-           writerJ.close();
         } catch (IOException e) {
             e.printStackTrace();
         }
 
     }
 
+    /**
+     * Pentru a incarca obiectul de tip catalog folosim din nou libraria Gson, respectiv metoda fromJson care primeste ca parametru un obiect de
+     * tipul FileReader care va prelua informatia din file-ul dat drept argument, si o va pune intr-un obiect din care provine informatia,
+     * in cazul nostru Catalog.
+     * @param path
+     * @return
+     * @throws InvalidCatalogException
+     * @throws IOException
+     */
     public static Catalog loadPlainText(String path)
     throws InvalidCatalogException, IOException
     {
@@ -49,7 +58,12 @@ public class CatalogUtil {
         return cat;
     }
 
-
+    /**
+     * Creeaza si salveaza un nou fisier local care are path-ul dat ca parametru
+     * Catalogul poate fi scris ca un ObjectOutputStream deoarece este serializabil
+     * @param catalog
+     * @throws IOException
+     */
     public static void save(Catalog catalog)
     throws IOException {
         try (ObjectOutputStream oos = new ObjectOutputStream(new FileOutputStream(catalog.getPath()))) {

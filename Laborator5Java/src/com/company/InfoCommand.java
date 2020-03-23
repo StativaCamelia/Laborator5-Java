@@ -17,6 +17,7 @@ import org.apache.tika.parser.ParseContext;
 import org.apache.tika.parser.Parser;
 import org.apache.tika.sax.BodyContentHandler;
 
+import org.xml.sax.ContentHandler;
 import org.xml.sax.SAXException;
 
 public class InfoCommand implements Command {
@@ -37,6 +38,15 @@ public class InfoCommand implements Command {
         this.parameters = parameters;
     }
 
+    /**
+     * Folosim modulul Apache Tika facem urmatorele operatii pentru a afla metadatele corespunzatoare unui file dat drept argument:
+     * instantiem un parser de tipul autodetect.
+     * Metoda de parsarea in vederea extragerii de metadate are nevoie de urmatorele argumente:
+     * stream(File-ul din care dorim sa extragem metadate instantiat ca un Stream de date),
+     * handler(transmite evenimente care apar pe timpul parsarii documentului, cum ar fi inceputul, sfarsitul acestuia etc),
+     * metadata(un obiect de tipul Metadata in care sunt stocate informatiile obtinute in urma parsarii)
+     * context(ofera parser-ului informatii din contextul actual care contribuie la customizarea informatiilor).
+     */
     @Override
     public void executeCommand(){
     for(String par: parameters){
@@ -44,17 +54,16 @@ public class InfoCommand implements Command {
             File file = new File(par);
 
             Parser parser = new AutoDetectParser();
-            BodyContentHandler handler = new BodyContentHandler();
+            ContentHandler handler = new BodyContentHandler();
             Metadata metadata = new Metadata();
 
-            FileInputStream inputStream = new FileInputStream(file);
+            InputStream inputStream = new FileInputStream(file);
             ParseContext context = new ParseContext();
 
             parser.parse(inputStream, handler, metadata, context);
 
             System.out.println(handler.toString());
 
-            //getting the list of all meta data elements
             String[] metadataNames = metadata.names();
 
             for (String name : metadataNames) {

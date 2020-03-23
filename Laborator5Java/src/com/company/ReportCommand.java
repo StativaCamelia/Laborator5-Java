@@ -37,6 +37,13 @@ public class ReportCommand implements Command{
         }
     }
 
+    /***
+     * In functie de extensie deschidem catalogul folosind una din metodele load sau loadPlaintext
+     * Instantiem apoi un obiect de tipul HtmlReport al carui constructor primeste drept parametru Catalogul pentru care dorim sa realizam raportul
+     * Si apelam metoda creatHtmlReport corespunzatore obiectului tocmai instantia, apoi preluam raportul in obiectul HtmlReport.
+     * Reportul il scriem apoi intr-un file cu extensia html pe care il salvam in Sistemul Local de Fisiere.
+     * @throws IOException
+     */
     @Override
     public void executeCommand()
     throws IOException {

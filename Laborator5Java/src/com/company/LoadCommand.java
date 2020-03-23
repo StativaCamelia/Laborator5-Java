@@ -24,6 +24,16 @@ public class LoadCommand implements Command {
         this.parameters = parameters;
     }
 
+    /**
+     *  In functie de extensia catalogului dat ca parametru, respectiv(ser sau json), afiseaza documentele adaugate un lista de documente ale acestuia.
+     *    Pentru formatul ser:
+     *    Foloseste obiecte de tip ObjectInputStream pentru a deserializa continutul fisierului si pentru al aduce la forma unui obiect de tipul Catalog
+     *    Pentru formatul json:
+     *    Folosim libraria Gson, respectiv metoda fromJson pentru a obtine catalogul din care provine continutul fisierului dat drept parametru.
+     * @throws InvalidCatalogException
+     * @throws IOException
+     * @throws ClassNotFoundException
+     */
     @Override
     public void executeCommand()
     throws InvalidCatalogException, IOException, ClassNotFoundException
