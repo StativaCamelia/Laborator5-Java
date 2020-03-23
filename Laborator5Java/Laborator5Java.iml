@@ -17,5 +17,7 @@
     <orderEntry type="library" name="velocity-engine-core-2.2" level="project" />
     <orderEntry type="library" name="velocity-engine-scripting-2.2" level="project" />
     <orderEntry type="library" name="velocity-tools-generic-3.0" level="project" />
+    <orderEntry type="library" name="dynamicreports-core-4.1.1" level="project" />
+    <orderEntry type="library" name="jasperreports-6.2.2" level="project" />
   </component>
 </module>

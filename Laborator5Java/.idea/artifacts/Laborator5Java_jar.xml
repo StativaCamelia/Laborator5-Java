@@ -2,9 +2,17 @@
   <artifact type="jar" build-on-make="true" name="Laborator5Java:jar">
     <output-path>$PROJECT_DIR$/out/artifacts/Laborator5Java_jar</output-path>
     <root id="archive" name="Laborator5Java.jar">
+      <element id="module-output" name="Laborator5Java" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/libs/jai-imageio-jpeg2000-1.3.0.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/libs/sqlite-jdbc-3.30.1.jar" path-in-jar="/" />
+      <element id="library" level="project" name="velocity-tools-generic-3.0-sources" />
       <element id="extracted-dir" path="$PROJECT_DIR$/libs/gson-2.8.2.jar" path-in-jar="/" />
-      <element id="module-source" name="Laborator5Java" />
-      <element id="library" level="project" name="tika-app-1.24" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/libs/velocity-engine-core-2.2.jar" path-in-jar="/" />
+      <element id="library" level="project" name="velocity-tools-view-jsp-3.0-sources" />
+      <element id="library" level="application" name="gson-2.8.2" />
+      <element id="library" level="project" name="velocity-engine-scripting-2.2" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/libs/tika-app-1.24.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/libs/velocity-tools-generic-3.0.jar" path-in-jar="/" />
     </root>
   </artifact>
 </component>
