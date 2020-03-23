@@ -1,0 +1,11 @@
+<html>
+<head>
+    <title> My Form </title>
+</head>
+<body>
+<ul>
+#foreach($par in $parameters)
+    <li>$par.toString()</li>
+#end
+</ul>
+</body>

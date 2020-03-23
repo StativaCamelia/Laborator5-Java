@@ -19,5 +19,35 @@
     <orderEntry type="library" name="velocity-tools-generic-3.0" level="project" />
     <orderEntry type="library" name="dynamicreports-core-4.1.1" level="project" />
     <orderEntry type="library" name="jasperreports-6.2.2" level="project" />
+    <orderEntry type="library" name="avalon-framework-impl-4.2.0" level="project" />
+    <orderEntry type="library" name="barcode4j-2.0" level="project" />
+    <orderEntry type="library" name="batik-anim-1.8" level="project" />
+    <orderEntry type="library" name="batik-awt-util-1.8" level="project" />
+    <orderEntry type="library" name="batik-bridge-1.8" level="project" />
+    <orderEntry type="library" name="xml-apis-1.3.04" level="project" />
+    <orderEntry type="library" name="xml-apis-ext-1.3.04" level="project" />
+    <orderEntry type="library" name="jfreechart-1.0.19" level="project" />
+    <orderEntry type="library" name="jcommon-1.0.23" level="project" />
+    <orderEntry type="library" name="jackson-databind-2.1.4" level="project" />
+    <orderEntry type="library" name="jackson-core-2.1.4" level="project" />
+    <orderEntry type="library" name="jackson-annotations-2.1.4" level="project" />
+    <orderEntry type="library" name="itext-2.1.7.js5" level="project" />
+    <orderEntry type="library" name="ecj-4.3.1" level="project" />
+    <orderEntry type="library" name="core-2.3.0" level="project" />
+    <orderEntry type="library" name="commons-logging-1.1.1" level="project" />
+    <orderEntry type="library" name="commons-lang3-3.1" level="project" />
+    <orderEntry type="library" name="commons-digester-2.1" level="project" />
+    <orderEntry type="library" name="commons-collections-3.2.2" level="project" />
+    <orderEntry type="library" name="commons-beanutils-1.9.0" level="project" />
+    <orderEntry type="library" name="batik-css-1.8" level="project" />
+    <orderEntry type="library" name="batik-dom-1.8" level="project" />
+    <orderEntry type="library" name="batik-ext-1.8" level="project" />
+    <orderEntry type="library" name="batik-gvt-1.8" level="project" />
+    <orderEntry type="library" name="batik-parser-1.8" level="project" />
+    <orderEntry type="library" name="batik-script-1.8" level="project" />
+    <orderEntry type="library" name="batik-svg-dom-1.8" level="project" />
+    <orderEntry type="library" name="batik-util-1.8" level="project" />
+    <orderEntry type="library" name="batik-xml-1.8" level="project" />
+    <orderEntry type="library" name="bcprov-jdk14-138" level="project" />
   </component>
 </module>
