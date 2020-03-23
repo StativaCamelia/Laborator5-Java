@@ -101,7 +101,7 @@ public class Main {
      */
     private void testCreateSave(){
         Catalog catalog =
-                new Catalog("Java Resources", "d:/JAVA/catalog.ser");
+                new Catalog("Java Resources", "D:/JAVA/Laborator5/Laborator5Java/catalog.ser");
         Document doc1 = new Document("java1", "Java Course 1", "https://profs.info.uaic.ro/~acf/java/slides/en/intro_slide_en.pdf");
         Document doc2 = new Document("java2", "Java Course 1", "https://profs.info.uaic.ro/~acf/java/slides/en/intro_slide_en.pdf");
         doc1.addTag("type", "Slides");
@@ -123,7 +123,7 @@ public class Main {
     }
 
     private void testCreateSaveJson(){
-        Catalog catalog = new Catalog("Java Resources", "d:/JAVA/catalog.json");
+        Catalog catalog = new Catalog("Java Resources", "D:/JAVA/Laborator5/Laborator5Java/catalog.json");
         Document doc = new Document("java1", "Java Course 1", "https://profs.info.uaic.ro/~acf/java/slides/en/intro_slide_en.pdf");
         doc.addTag("type", "Slides");
 
@@ -146,7 +146,7 @@ public class Main {
     public void testLoadJson(){
         Catalog catalog = new Catalog();
         try {
-            catalog = CatalogUtil.loadPlainText("d:/JAVA/catalog.json");
+            catalog = CatalogUtil.loadPlainText("D:/JAVA/Laborator5/Laborator5Java/catalog.json");
         }
         catch(IOException| InvalidCatalogException e) {
             e.printStackTrace();
@@ -159,7 +159,7 @@ public class Main {
     private void testLoadView(){
         Catalog catalog = new Catalog();
         try {
-            catalog = CatalogUtil.load("d:/JAVA/catalog.ser");
+            catalog = CatalogUtil.load("D:/JAVA/Laborator5/Laborator5Java/catalog.ser");
         }
         catch(IOException| InvalidCatalogException| ClassNotFoundException e) {
             e.printStackTrace();
